@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ============ SEO META TAGS ============ -->
-  <title>BestWest Cleaning | Professional Home & Office Cleaning Services</title>
-  <meta name="description" content="BestWest Cleaning offers professional residential, commercial, deep, move-in/move-out, post-construction, and carpet cleaning services. Get a free quote today via WhatsApp or email." />
-  <meta name="keywords" content="cleaning service, house cleaning, office cleaning, deep cleaning, move out cleaning, carpet cleaning, BestWest Cleaning" />
+  <title>BestWest Cleaning | Professional Home & Office Cleaning in Warri, Delta State</title>
+  <meta name="description" content="BestWest Cleaning offers professional residential, commercial, deep, move-in/move-out, post-construction, and carpet cleaning services in Warri, Delta State. Get a free quote today via WhatsApp or email." />
+  <meta name="keywords" content="cleaning service, house cleaning, office cleaning, deep cleaning, move out cleaning, carpet cleaning, BestWest Cleaning, Warri, Delta State" />
   <meta name="author" content="BestWest Cleaning" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / Social sharing -->
   <meta property="og:title" content="BestWest Cleaning | Spotless Homes & Offices, On Your Schedule" />
-  <meta property="og:description" content="Book trusted, insured, and eco-friendly cleaning services for your home or office. Request a free quote in minutes." />
+  <meta property="og:description" content="Book trusted, insured, and eco-friendly cleaning services for your home or office in Warri, Delta State. Request a free quote in minutes." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-image.jpg" />
 
@@ -34,11 +34,13 @@
 
   <!-- ======================================================
        HEADER / NAVBAR
-       Sticky navigation with logo, links, and Book Now CTA
+       Sticky navigation with logo, links, and Book Now CTA.
+       This same navbar block is repeated on every page —
+       only the "active" class on the current page's link differs.
   ====================================================== -->
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
-      <a href="#home" class="navbar__logo">
+      <a href="index.html" class="navbar__logo">
         <span class="navbar__logo-mark" aria-hidden="true">
           <i data-lucide="sparkles"></i>
         </span>
@@ -46,16 +48,16 @@
       </a>
 
       <nav class="navbar__nav" id="navbar-nav" aria-label="Primary navigation">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#booking">Booking</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#why-us">Why Us</a>
+        <a href="booking.html">Booking</a>
+        <a href="faq.html">FAQ / Contact</a>
       </nav>
 
       <div class="navbar__actions">
-        <a href="#booking" class="btn btn--accent btn--sm">Book Now</a>
+        <a href="booking.html" class="btn btn--accent btn--sm">Book Now</a>
         <button class="navbar__burger" id="navbar-burger" aria-label="Toggle menu" aria-expanded="false">
           <i data-lucide="menu"></i>
         </button>
@@ -74,10 +76,10 @@
           <h1>Spotless Homes &amp; Offices, On Your Schedule</h1>
           <p class="hero__subtitle">
             BestWest Cleaning brings reliable, eco-friendly, and fully insured cleaning
-            teams to your door — book in minutes, relax for hours.
+            teams to your door in Warri and beyond — book in minutes, relax for hours.
           </p>
           <div class="hero__ctas">
-            <a href="#booking" class="btn btn--accent btn--lg">
+            <a href="booking.html" class="btn btn--accent btn--lg">
               <i data-lucide="calendar-check"></i> Get a Free Quote
             </a>
             <a href="#" id="hero-whatsapp" class="btn btn--outline btn--lg" target="_blank" rel="noopener">
@@ -111,16 +113,16 @@
     </section>
 
     <!-- ======================================================
-         SERVICES SECTION
+         SERVICES TEASER (links to services.html)
     ====================================================== -->
-    <section id="services" class="section">
+    <section class="section">
       <div class="container">
         <div class="section__header">
           <p class="eyebrow">What We Offer</p>
           <h2>Cleaning Services for Every Space</h2>
           <p class="section__lead">
             From a quick weekly tidy to a full post-construction clear-out, our trained
-            teams handle it all — choose a service below or ask for a custom plan.
+            teams handle it all.
           </p>
         </div>
 
@@ -142,24 +144,12 @@
             <h3>Deep Cleaning</h3>
             <p>A thorough, top-to-bottom clean covering hard-to-reach spots, grout, baseboards, appliances, and more.</p>
           </article>
+        </div>
 
-          <article class="card card--service">
-            <div class="card__icon"><i data-lucide="truck"></i></div>
-            <h3>Move-in / Move-out Cleaning</h3>
-            <p>Start fresh in your new place or leave your old one spotless for inspection — full property cleaning before or after a move.</p>
-          </article>
-
-          <article class="card card--service">
-            <div class="card__icon"><i data-lucide="hammer"></i></div>
-            <h3>Post-Construction Cleaning</h3>
-            <p>Dust, debris, and residue removal after renovation or building work, leaving your space safe and ready to use.</p>
-          </article>
-
-          <article class="card card--service">
-            <div class="card__icon"><i data-lucide="layers"></i></div>
-            <h3>Carpet &amp; Upholstery Cleaning</h3>
-            <p>Deep steam and stain-removal treatments for carpets, rugs, sofas, and upholstered furniture.</p>
-          </article>
+        <div class="section__cta">
+          <a href="services.html" class="btn btn--outline btn--lg">
+            <i data-lucide="layout-grid"></i> View All Services
+          </a>
         </div>
       </div>
     </section>
@@ -247,67 +237,9 @@
     </section>
 
     <!-- ======================================================
-         PRICING SECTION
-    ====================================================== -->
-    <section id="pricing" class="section section--tinted">
-      <div class="container">
-        <div class="section__header">
-          <p class="eyebrow">Simple, Transparent Plans</p>
-          <h2>Pricing &amp; Packages</h2>
-          <p class="section__lead">Sample starting prices for a standard home. Final pricing depends on size, condition, and frequency — request a free custom quote anytime.</p>
-        </div>
-
-        <div class="grid grid--pricing">
-          <!-- Basic Plan -->
-          <div class="card card--pricing">
-            <h3>Basic</h3>
-            <p class="card--pricing__desc">Quick standard clean for tidy spaces.</p>
-            <div class="card--pricing__price">$60<span>/visit</span></div>
-            <ul class="card--pricing__features">
-              <li><i data-lucide="check"></i> Kitchen &amp; bathroom wipe-down</li>
-              <li><i data-lucide="check"></i> Dusting &amp; vacuuming</li>
-              <li><i data-lucide="check"></i> Trash removal</li>
-              <li><i data-lucide="check"></i> Up to 2 hours</li>
-            </ul>
-            <a href="#booking" class="btn btn--outline btn--full plan-select" data-plan="Basic">Book This Plan</a>
-          </div>
-
-          <!-- Standard Plan (highlighted) -->
-          <div class="card card--pricing card--pricing--featured">
-            <span class="card--pricing__tag">Most Popular</span>
-            <h3>Standard</h3>
-            <p class="card--pricing__desc">Thorough clean for the whole home or office.</p>
-            <div class="card--pricing__price">$110<span>/visit</span></div>
-            <ul class="card--pricing__features">
-              <li><i data-lucide="check"></i> Everything in Basic</li>
-              <li><i data-lucide="check"></i> Inside microwave &amp; oven exterior</li>
-              <li><i data-lucide="check"></i> Baseboards &amp; window sills</li>
-              <li><i data-lucide="check"></i> Up to 4 hours</li>
-            </ul>
-            <a href="#booking" class="btn btn--accent btn--full plan-select" data-plan="Standard">Book This Plan</a>
-          </div>
-
-          <!-- Premium Plan -->
-          <div class="card card--pricing">
-            <h3>Premium</h3>
-            <p class="card--pricing__desc">Deep clean &amp; specialty services for larger or post-event spaces.</p>
-            <div class="card--pricing__price">Custom<span> quote</span></div>
-            <ul class="card--pricing__features">
-              <li><i data-lucide="check"></i> Everything in Standard</li>
-              <li><i data-lucide="check"></i> Carpet &amp; upholstery cleaning</li>
-              <li><i data-lucide="check"></i> Post-construction / move-out</li>
-              <li><i data-lucide="check"></i> Tailored to your space</li>
-            </ul>
-            <a href="#booking" class="btn btn--outline btn--full plan-select" data-plan="Premium / Custom Quote">Book This Plan</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================
          TESTIMONIALS SECTION
     ====================================================== -->
-    <section id="testimonials" class="section">
+    <section id="testimonials" class="section section--tinted">
       <div class="container">
         <div class="section__header">
           <p class="eyebrow">What Clients Say</p>
@@ -364,185 +296,31 @@
     </section>
 
     <!-- ======================================================
-         BOOKING / ORDER FORM SECTION
+         FINAL CTA BAND
     ====================================================== -->
-    <section id="booking" class="section section--tinted">
-      <div class="container">
-        <div class="section__header">
-          <p class="eyebrow">Request a Service</p>
-          <h2>Get Your Free Quote</h2>
-          <p class="section__lead">
-            Fill in your details below, then send your request to us via Email or
-            WhatsApp — whichever is easiest for you. We'll get back to you quickly
-            to confirm everything.
-          </p>
+    <section class="section cta-band">
+      <div class="container cta-band__inner">
+        <div>
+          <h2>Ready for a spotless space?</h2>
+          <p>Request your free quote today — we'll respond within hours.</p>
         </div>
-
-        <form id="booking-form" class="booking-form" novalidate>
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="fullName">Full Name <span class="required">*</span></label>
-              <input type="text" id="fullName" name="fullName" required placeholder="e.g. Jane Doe" />
-              <span class="form-error" data-error-for="fullName"></span>
-            </div>
-
-            <div class="form-field">
-              <label for="phone">Phone Number <span class="required">*</span></label>
-              <input type="tel" id="phone" name="phone" required placeholder="e.g. +234 901 234 5678" />
-              <span class="form-error" data-error-for="phone"></span>
-            </div>
-
-            <div class="form-field">
-              <label for="email">Email Address <span class="required">*</span></label>
-              <input type="email" id="email" name="email" required placeholder="e.g. jane@email.com" />
-              <span class="form-error" data-error-for="email"></span>
-            </div>
-
-            <div class="form-field">
-              <label for="serviceType">Service Type <span class="required">*</span></label>
-              <select id="serviceType" name="serviceType" required>
-                <option value="" disabled selected>Select a service</option>
-                <option value="Residential Cleaning">Residential Cleaning</option>
-                <option value="Office / Commercial Cleaning">Office / Commercial Cleaning</option>
-                <option value="Deep Cleaning">Deep Cleaning</option>
-                <option value="Move-in / Move-out Cleaning">Move-in / Move-out Cleaning</option>
-                <option value="Post-Construction Cleaning">Post-Construction Cleaning</option>
-                <option value="Carpet & Upholstery Cleaning">Carpet &amp; Upholstery Cleaning</option>
-              </select>
-              <span class="form-error" data-error-for="serviceType"></span>
-            </div>
-
-            <div class="form-field">
-              <label for="propertyType">Property Type <span class="required">*</span></label>
-              <select id="propertyType" name="propertyType" required>
-                <option value="" disabled selected>Select property type</option>
-                <option value="Home">Home</option>
-                <option value="Office">Office</option>
-              </select>
-              <span class="form-error" data-error-for="propertyType"></span>
-            </div>
-
-            <div class="form-field">
-              <label for="preferredDate">Preferred Date &amp; Time <span class="required">*</span></label>
-              <input type="datetime-local" id="preferredDate" name="preferredDate" required />
-              <span class="form-error" data-error-for="preferredDate"></span>
-            </div>
-
-            <div class="form-field form-field--full">
-              <label for="address">Address <span class="required">*</span></label>
-              <input type="text" id="address" name="address" required placeholder="Street, City, State" />
-              <span class="form-error" data-error-for="address"></span>
-            </div>
-
-            <div class="form-field form-field--full">
-              <label for="notes">Additional Notes / Special Requests</label>
-              <textarea id="notes" name="notes" rows="4" placeholder="Anything else we should know? e.g. pets in the home, areas to focus on, parking instructions..."></textarea>
-            </div>
-          </div>
-
-          <!-- Hidden field used to prefill the selected pricing plan, if any -->
-          <input type="hidden" id="selectedPlan" name="selectedPlan" value="" />
-
-          <div class="booking-form__actions">
-            <button type="button" id="send-email-btn" class="btn btn--primary btn--lg">
-              <i data-lucide="mail"></i> Send via Email
-            </button>
-            <button type="button" id="send-whatsapp-btn" class="btn btn--accent btn--lg">
-              <i data-lucide="message-circle"></i> Send via WhatsApp
-            </button>
-          </div>
-
-          <p class="booking-form__hint">
-            <i data-lucide="info"></i>
-            Clicking either button will open your email app or WhatsApp with your details
-            pre-filled and ready to send to us — no extra typing needed.
-          </p>
-        </form>
-      </div>
-    </section>
-
-    <!-- ======================================================
-         FAQ SECTION
-    ====================================================== -->
-    <section id="faq" class="section">
-      <div class="container">
-        <div class="section__header">
-          <p class="eyebrow">Questions &amp; Answers</p>
-          <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <div class="accordion" id="faq-accordion">
-          <div class="accordion__item">
-            <button class="accordion__trigger" aria-expanded="false">
-              <span>Do I need to provide cleaning supplies or equipment?</span>
-              <i data-lucide="chevron-down" class="accordion__chevron"></i>
-            </button>
-            <div class="accordion__panel">
-              <p>No. Our team arrives fully equipped with professional, eco-friendly cleaning products and tools. If you'd prefer we use specific products you already have, just let us know in the notes field when booking.</p>
-            </div>
-          </div>
-
-          <div class="accordion__item">
-            <button class="accordion__trigger" aria-expanded="false">
-              <span>How do I pay for the service?</span>
-              <i data-lucide="chevron-down" class="accordion__chevron"></i>
-            </button>
-            <div class="accordion__panel">
-              <p>We'll confirm your final quote and available payment options (cash, bank transfer, or other methods) directly with you via WhatsApp or email after reviewing your booking details — no online payment is required to make a request.</p>
-            </div>
-          </div>
-
-          <div class="accordion__item">
-            <button class="accordion__trigger" aria-expanded="false">
-              <span>Can I reschedule or cancel my booking?</span>
-              <i data-lucide="chevron-down" class="accordion__chevron"></i>
-            </button>
-            <div class="accordion__panel">
-              <p>Yes. We understand plans change. Simply message us via WhatsApp or email at least 24 hours before your scheduled time and we'll happily find a new slot for you.</p>
-            </div>
-          </div>
-
-          <div class="accordion__item">
-            <button class="accordion__trigger" aria-expanded="false">
-              <span>Are your cleaners background-checked and insured?</span>
-              <i data-lucide="chevron-down" class="accordion__chevron"></i>
-            </button>
-            <div class="accordion__panel">
-              <p>Absolutely. Every member of our cleaning team is background-checked, trained, and covered by insurance, so you can feel confident and safe having us in your home or office.</p>
-            </div>
-          </div>
-
-          <div class="accordion__item">
-            <button class="accordion__trigger" aria-expanded="false">
-              <span>How long does a typical cleaning take?</span>
-              <i data-lucide="chevron-down" class="accordion__chevron"></i>
-            </button>
-            <div class="accordion__panel">
-              <p>It depends on the size of your space and the service selected. A basic clean for a small apartment may take 1-2 hours, while deep cleans, move-out cleans, or larger offices can take 4+ hours. We'll give you a clear time estimate when we confirm your booking.</p>
-            </div>
-          </div>
-
-          <div class="accordion__item">
-            <button class="accordion__trigger" aria-expanded="false">
-              <span>What areas do you service?</span>
-              <i data-lucide="chevron-down" class="accordion__chevron"></i>
-            </button>
-            <div class="accordion__panel">
-              <p>We currently service the Greater Lagos area and surrounding suburbs. Not sure if we cover your location? Send us your address via the booking form and we'll confirm right away.</p>
-            </div>
-          </div>
+        <div class="cta-band__actions">
+          <a href="booking.html" class="btn btn--accent btn--lg">
+            <i data-lucide="calendar-check"></i> Book Now
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <!-- ======================================================
-       FOOTER / CONTACT SECTION
+       FOOTER
+       This same footer block is repeated on every page.
   ====================================================== -->
   <footer id="contact" class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a href="#home" class="navbar__logo navbar__logo--footer">
+        <a href="index.html" class="navbar__logo navbar__logo--footer">
           <span class="navbar__logo-mark" aria-hidden="true"><i data-lucide="sparkles"></i></span>
           BestWest <span class="navbar__logo-accent">Cleaning</span>
         </a>
@@ -558,18 +336,18 @@
 
       <div class="footer__col">
         <h3>Quick Links</h3>
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#booking">Booking</a>
-        <a href="#faq">FAQ</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="index.html#why-us">Why Us</a>
+        <a href="booking.html">Booking</a>
+        <a href="faq.html">FAQ</a>
       </div>
 
       <div class="footer__col">
         <h3>Contact</h3>
         <a href="mailto:adewumisamuel0231@gmail.com"><i data-lucide="mail"></i> adewumisamuel0231@gmail.com</a>
         <a href="tel:+2349026958161"><i data-lucide="phone"></i> +234 902 695 8161</a>
-        <span class="footer__static"><i data-lucide="map-pin"></i> Greater Lagos Area &amp; Suburbs</span>
+        <span class="footer__static"><i data-lucide="map-pin"></i> 10, Moses Udi Street, Ugbomro, Uvwie LGA, Effurun, Warri, Delta State</span>
       </div>
     </div>
 

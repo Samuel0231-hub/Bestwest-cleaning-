@@ -76,8 +76,9 @@ function buildWhatsAppGreetingLink() {
   return `https://wa.me/${BUSINESS_WHATSAPP}?text=${encodeURIComponent(message)}`;
 }
 
-document.getElementById("hero-whatsapp").href = buildWhatsAppGreetingLink();
+document.getElementById("hero-whatsapp") && (document.getElementById("hero-whatsapp").href = buildWhatsAppGreetingLink());
 document.getElementById("floating-whatsapp").href = buildWhatsAppGreetingLink();
+document.getElementById("contact-whatsapp") && (document.getElementById("contact-whatsapp").href = buildWhatsAppGreetingLink());
 
 /* ----------------------------------------------------------------------
    5. FAQ ACCORDION
@@ -110,17 +111,27 @@ accordionItems.forEach((item) => {
 /* ----------------------------------------------------------------------
    6. PRICING PLAN -> BOOKING FORM PREFILL
    --------------------------------------------------------------------
-   Clicking "Book This Plan" scrolls to the booking form and stores the
-   selected plan name in a hidden field so it's included in the message.
+   On pricing.html, clicking "Book This Plan" stores the selected plan
+   name in sessionStorage, then navigates to booking.html, where it's
+   read back into the hidden "selectedPlan" field.
 ---------------------------------------------------------------------- */
 const planButtons = document.querySelectorAll(".plan-select");
-const selectedPlanInput = document.getElementById("selectedPlan");
 
 planButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    selectedPlanInput.value = btn.dataset.plan || "";
+    sessionStorage.setItem("bestwest_selected_plan", btn.dataset.plan || "");
   });
 });
+
+// On booking.html, prefill the hidden field if a plan was selected
+const selectedPlanInput = document.getElementById("selectedPlan");
+if (selectedPlanInput) {
+  const storedPlan = sessionStorage.getItem("bestwest_selected_plan");
+  if (storedPlan) {
+    selectedPlanInput.value = storedPlan;
+    sessionStorage.removeItem("bestwest_selected_plan");
+  }
+}
 
 /* ----------------------------------------------------------------------
    7. BOOKING FORM VALIDATION
@@ -181,16 +192,18 @@ function validateForm() {
 }
 
 // Live-clear error state as the user types/changes a field
-requiredFields.forEach(({ id }) => {
-  const field = document.getElementById(id);
-  field.addEventListener("input", () => {
-    if (field.classList.contains("invalid")) {
-      field.classList.remove("invalid");
-      const errorEl = document.querySelector(`[data-error-for="${id}"]`);
-      if (errorEl) errorEl.textContent = "";
-    }
+if (form) {
+  requiredFields.forEach(({ id }) => {
+    const field = document.getElementById(id);
+    field.addEventListener("input", () => {
+      if (field.classList.contains("invalid")) {
+        field.classList.remove("invalid");
+        const errorEl = document.querySelector(`[data-error-for="${id}"]`);
+        if (errorEl) errorEl.textContent = "";
+      }
+    });
   });
-});
+}
 
 /* ----------------------------------------------------------------------
    8. EMAIL / WHATSAPP MESSAGE BUILDERS
@@ -314,8 +327,10 @@ function sendViaWhatsApp() {
   showToast("Opening WhatsApp...");
 }
 
-document.getElementById("send-email-btn").addEventListener("click", sendViaEmail);
-document.getElementById("send-whatsapp-btn").addEventListener("click", sendViaWhatsApp);
+if (form) {
+  document.getElementById("send-email-btn").addEventListener("click", sendViaEmail);
+  document.getElementById("send-whatsapp-btn").addEventListener("click", sendViaWhatsApp);
+}
 
 /**
  * Scrolls smoothly to the first invalid field in the booking form.

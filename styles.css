@@ -356,6 +356,14 @@ textarea:focus-visible {
   width: 100%;
 }
 
+.navbar__nav a.active {
+  color: var(--color-teal-700);
+}
+
+.navbar__nav a.active::after {
+  width: 100%;
+}
+
 .navbar__actions {
   display: flex;
   align-items: center;
@@ -1062,6 +1070,135 @@ textarea:focus-visible {
 }
 
 /* ---------------------------------------------------------------------- 
+   14b. SUB-PAGE HEADER, CTA BANDS, CONTACT CARDS, PRICING NOTE
+   ---------------------------------------------------------------------- */
+
+/* Generic header band used at the top of non-home pages */
+.page-header {
+  padding: var(--space-8) 0 var(--space-7);
+  background: linear-gradient(180deg, var(--color-sky-50) 0%, var(--color-white) 100%);
+  text-align: center;
+}
+
+.page-header .eyebrow {
+  display: inline-flex;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+}
+
+.page-header h1 {
+  margin-top: var(--space-3);
+}
+
+.page-header .section__lead {
+  max-width: 680px;
+  margin: var(--space-3) auto 0;
+}
+
+/* "View all" / "Request quote" CTA centered under a grid */
+.section__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-7);
+}
+
+/* Final CTA band on the home page */
+.cta-band {
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-7);
+}
+
+.cta-band__inner {
+  background: var(--color-teal-900);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-band__inner h2 {
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.cta-band__inner p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cta-band__actions {
+  flex-shrink: 0;
+}
+
+/* Pricing disclaimer note */
+.pricing-note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  max-width: 760px;
+  margin: var(--space-7) auto 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+}
+
+.pricing-note i {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-teal-700);
+}
+
+/* Contact cards (FAQ/Contact page) */
+.grid--contact {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-6);
+  text-align: left;
+}
+
+.contact-card h3 {
+  margin-bottom: var(--space-2);
+}
+
+.contact-card p {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  margin-bottom: var(--space-4);
+}
+
+.contact-card__value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-teal-900);
+  font-size: 0.95rem;
+}
+
+.contact-card--static {
+  cursor: default;
+}
+
+.contact-card:not(.contact-card--static):hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------------------------------------------------------------------- 
    15. RESPONSIVE BREAKPOINTS
    ---------------------------------------------------------------------- */
 
@@ -1074,6 +1211,10 @@ textarea:focus-visible {
 
   .grid--badges {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--contact {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .grid--pricing {
@@ -1171,6 +1312,20 @@ textarea:focus-visible {
   .grid--testimonials,
   .grid--badges {
     grid-template-columns: 1fr;
+  }
+
+  .grid--contact {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-band__inner {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-6);
+  }
+
+  .cta-band__actions .btn {
+    width: 100%;
   }
 
   .step {
